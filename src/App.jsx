@@ -11,6 +11,7 @@ import AuthLayout from './layouts/AuthLayout';
 import Login from './views/login';
 import RegisterPage from './views/login/register';
 import ProfileLayout from './layouts/ProfileLayout';
+import EmployeesPage from './views/login/EmployeesPage';
 
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
             <Route path="register" element={<RegisterPage/>}/>
           </Route>
 
-          <Route path="app" element={<ProfileLayout/>}/>
+          <Route path="app" element={<ProfileLayout/>}>
+            <Route path="funcionarios" element={<EmployeesPage/>}/>
+          </Route>
 
         </Routes>
       </BrowserRouter>
